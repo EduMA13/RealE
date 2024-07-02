@@ -1,0 +1,7 @@
+{
+  "name": "RealE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
