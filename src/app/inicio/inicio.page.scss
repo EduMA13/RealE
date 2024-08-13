@@ -1,0 +1,176 @@
+ion-header {
+    --background : transparent;
+    --ion-background-color: transparent;
+    --ion-toolbar-shadow-display: none; /* Elimina la sombra */
+    --box-shadow: none; /* Elimina la sombra */
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.perfil_usuario{
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+
+.perfil_usuario ion-button{
+  --background: transparent; 
+}
+
+.accordion-content {
+  position: absolute;
+  top: 9%;
+  left: 70%;
+  width: 30%;
+  z-index: 1000;  
+
+}
+.first_button{
+
+  border-radius: 10px 10px 0 0;
+
+}
+
+.second_button{
+  --border-radius: 0 0 10px 10px
+}
+
+.img_usuario{
+    width: 50px;
+    height: auto;
+}
+
+ion-content{
+    --background:  url('../../assets/img/Background_image.png')  no-repeat center center / cover ;
+}
+
+///Search bar and filters ////
+
+.search_filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+ion-searchbar{
+    --background: #bab8b7;
+    --color: #000;
+    --placeholder-color: #5d5d5c;
+    --icon-color: #999;
+    width: 500px;
+    --border-radius: 20px;
+    --border-color: #bab8b7;
+    
+}
+
+.button-group{
+    display: flex;
+    width: 160px;
+    background: #bab8b7;
+    border-radius: 25px;
+    padding: 0px 0;
+}
+.button-group ion-button{
+    --background: transparent;
+    --background-activated: transparent;
+    --background-focused: transparent;
+    --background-hover: transparent;
+    --border-radius: 0;
+    color: #000;
+    margin: 3px 0;
+}
+.home_btn{
+    border-right:  1px solid #000;
+}
+.filter_btn{
+    border-right:  1px solid #000;
+}
+
+///Propiedades///
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    color: #000000;
+    background: #bab8b7;
+    border: 2px solid;
+    border-radius: 20px;
+    border-color: #838180;
+    width: 294px;
+    margin: 10px auto;
+    padding: 5px 0;
+}
+
+.title p {
+    margin: 0;
+}
+
+
+//Propiedades//
+
+.property-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 10px;
+    background: rgba(255, 255, 255, 0.65); 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    color: #242323;
+
+  }
+  
+  .property-card img {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    width: 300px;
+    height: 200px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  ion-card-header {
+    padding: 10px 15px;
+  }
+  
+  ion-card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #242323;
+  }
+  
+  .property-status, .property-location, .property-price {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .property-status ion-icon, .property-location ion-icon {
+    margin-right: 8px;
+  }
+  
+  .property-price {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+  }
+  
+  .property-card ion-button {
+    margin-top: 15px;
+    --background: #000;
+    --color: white;
+    --border-radius: 10px;
+    --border-color: #000;   
+  }
+  

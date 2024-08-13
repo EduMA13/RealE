@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-back-button defaultHref="/inicio"></ion-back-button>
+    <ion-title>Favoritos</ion-title>
+  </div>
+
+  <div class="favorites" *ngIf="favorites.length > 0; else noFavorites">
+    <ion-card class="property-card" *ngFor="let property of favorites">
+      <ion-card-content>
+        <ion-item lines="none" class="property-item">
+          <ion-thumbnail slot="start" class="property-thumbnail">
+            <img [src]="property.image" alt="Casa">
+          </ion-thumbnail>
+          <ion-label>
+            <div class="desc_fav">
+              <h2>{{ property.title }}</h2>
+              <p>{{ property.address }}</p>
+              <p class="price">{{ property.price }}</p>
+            </div>
+            <div class="delete_button">
+              <ion-button class="delete_btn" shape="round" fill="clear" color="dark" (click)="removeFavorite(property)" >Eliminar</ion-button>
+            </div>
+          </ion-label>
+          <div class="fav_icon">
+            <ion-icon name="heart" slot="end" class="favorite-icon"></ion-icon>
+          </div>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ng-template #noFavorites>
+    <ion-card>
+      <ion-card-content>
+        No tienes propiedades favoritas.
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+</ion-content>

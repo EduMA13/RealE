@@ -1,0 +1,58 @@
+<ion-content class="login-container">
+  <div class="login-logo">
+    <img class="logo" src="../../assets/img/RealE_Icon.png" alt="Reale">
+  </div>
+
+  <ion-text class="login-title">
+    <h1>Registrarme</h1>
+  </ion-text>
+
+  <div class="userplace">
+    <ion-item class="userinput" lines="none">
+      <ion-input class="usuario" [(ngModel)]="email" placeholder="Correo electrónico o número de teléfono"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="userplace">
+    <ion-item class="userinput" lines="none">
+      <ion-input class="usuario" [(ngModel)]="username" placeholder="Usuario"></ion-input>
+    </ion-item>
+  </div>
+
+
+  <div class="passwordplace">
+    <ion-item class="passwordinput" lines="none">
+      <ion-input type="password" [(ngModel)]="password" placeholder="Contraseña"></ion-input>
+      <ion-button fill="clear" slot="end">
+        <ion-icon name="eye"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+
+  <div class="loginbtn">
+    <ion-button expand="block" (click)="register()">Registrarme</ion-button>
+  </div>
+
+
+  <div class="otherlogin">
+    <ion-text class="login-with">
+      <p>Registrarme con:</p>
+    </ion-text>
+  </div>
+
+  <div class="social-login">
+    <ion-button fill="clear">
+      <img src="../../assets/img/Google_ico.png" alt="Google">
+    </ion-button>
+    <ion-button fill="clear">
+      <img src="../../assets/img/Facebook_ico.png" alt="Facebook">
+    </ion-button>
+    <ion-button fill="clear">
+      <img src="../../assets/img/Apple_ico.png" alt="Apple">
+    </ion-button>
+  </div>
+
+
+
+
+</ion-content>

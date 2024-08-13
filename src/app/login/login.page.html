@@ -1,0 +1,59 @@
+<ion-content class="login-container">
+  <div class="login-logo">
+    <img class="logo" src="../../assets/img/RealE_Icon.png" alt="Reale">
+  </div>
+
+  <ion-text class="login-title">
+    <h1>Iniciar sesión</h1>
+  </ion-text>
+
+  <div class="userplace">
+    <ion-item class="userinput" lines="none">
+      <ion-input class="usuario" [(ngModel)]="username" placeholder="Usuario"></ion-input>
+    </ion-item>
+  </div>
+
+
+  <div class="passwordplace">
+    <ion-item class="passwordinput" lines="none">
+      <ion-input type="password" [(ngModel)]="password" placeholder="Contraseña"></ion-input>
+      <ion-button fill="clear" slot="end">
+        <ion-icon name="eye"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+
+  <div class="loginbtn">
+    <ion-button expand="block" (click)="login()">Iniciar sesión</ion-button>
+  </div>
+
+
+
+  <div class="registerplace">
+    <ion-text class="register-link">
+      <a href="/register">Registrarme</a>
+    </ion-text>
+  </div>
+
+  <div class="otherlogin">
+    <ion-text class="login-with">
+      <p>Iniciar sesión con:</p>
+    </ion-text>
+  </div>
+
+  <div class="social-login">
+    <ion-button fill="clear">
+      <img src="../../assets/img/Google_ico.png" alt="Google">
+    </ion-button>
+    <ion-button fill="clear">
+      <img src="../../assets/img/Facebook_ico.png" alt="Facebook">
+    </ion-button>
+    <ion-button fill="clear">
+      <img src="../../assets/img/Apple_ico.png" alt="Apple">
+    </ion-button>
+  </div>
+
+
+
+
+</ion-content>

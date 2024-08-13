@@ -1,0 +1,102 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="header">
+    <ion-back-button defaultHref="/inicio"></ion-back-button>
+    <ion-title>{{ isEditMode ? 'Editar Propiedad' : 'Publicar Propiedad' }}</ion-title>
+  </div>
+
+  <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+    <div class="register_form">
+      <ion-card>
+        <ion-list>
+          <ion-item>
+            <ion-input formControlName="title" label="Titulo:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="address" label="Domicilio:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="price" label="Precio (texto):"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="description" label="Descripción:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="image" label="URL de la imagen:"></ion-input>
+          </ion-item>
+
+          <ion-card-header class="top_header">
+            <ion-card-subtitle>Características </ion-card-subtitle>
+          </ion-card-header>
+          <ion-item>
+            <ion-input formControlName="exterior" label="Exterior:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="general" label="General:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="recreation" label="Recreación:"></ion-input>
+          </ion-item>
+          <ion-card-header class="second_header">
+           <ion-card-subtitle>Detalles</ion-card-subtitle>
+          </ion-card-header>
+          <ion-item>
+            <ion-input formControlName="houseid" label="ID de la casa:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="internalkey" label="Clave interna:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="typehouse" label="Tipo de casa:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="sale" label="Precio de venta (texto):"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="number" formControlName="bedroom" label="No. Recámaras:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="number" formControlName="bathroom" label="No. Baños:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="length" label="Tamaño de construcción:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="vendor" label="Asesor:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="propertytype" label="Tipo de propiedad:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="status" label="Estado:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="descripcion" label="Descripción adicional:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="number" formControlName="precio_en_anios" label="Precio en años:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="number" formControlName="areas_verdes" label="Áreas verdes:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="detalles" label="Detalles:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-select formControlName="tamano" label="Tamaño:">
+              <ion-select-option value="grande">Grande</ion-select-option>
+              <ion-select-option value="pequeña">Pequeña</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="colonia" label="Colonia:"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="number" formControlName="precio" label="Precio (número):"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </div>
+    <ion-button expand="block" fill="clear" shape="round" class="update_btn" type="submit" [disabled]="!propertyForm.valid">{{ isEditMode ? 'Actualizar' : 'Publicar'
+      }}</ion-button>
+  </form>
+</ion-content>

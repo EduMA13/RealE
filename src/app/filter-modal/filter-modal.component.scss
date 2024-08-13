@@ -1,0 +1,38 @@
+.filter-container {
+    padding: 16px;
+  }
+  
+  .property-type {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .property-type ion-chip {
+    margin: 4px;
+  }
+  
+  .price-range {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .price-range ion-input {
+    width: 48%;
+  }
+  
+  .apply_btn{
+    border: 1px solid  #cccccc;
+    border-radius: 20px;
+    --background: white;
+    --color: black;
+    font-weight: bolder;
+  }
+
+  .delete_btn{
+    border: 1px solid  #cccccc;
+    border-radius: 20px;
+    --background: transparent;
+    --color: white;
+    font-weight: bolder;
+  }

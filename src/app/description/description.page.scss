@@ -1,0 +1,104 @@
+ion-content {
+   --background: url('../../assets/img/Background_image.png') no-repeat center center / cover;
+}
+
+//header//
+.header {
+   display: flex;
+   margin-top: 20px;
+}
+
+ion-back-button {
+   width: 10px;
+}
+
+
+//titulo//
+
+.titulo_propiedad {
+   display: flex;
+   justify-content: space-between;
+   margin: 0 15px;
+}
+
+.titulo_propiedad h1 {
+   font-size: large;
+   color: #ffff;
+}
+
+.titulo_propiedad h2 {
+   font-size: medium;
+   color: #c3c2c0;
+}
+
+.titulo_propiedad ion-icon {
+   padding: 20px;
+}
+
+//imagen
+.img_propiedad {
+   display: flex;
+   justify-content: center;
+   margin: auto 10px;
+}
+
+.img_propiedad img {
+   border-radius: 20px;
+   width: auto;
+   height: auto;
+}
+
+//Desc
+.descripcion ion-card {
+   --background: rgba(0, 0, 0, 0.60);
+   border-radius: 10px;
+}
+
+.descripcion ion-card-title {
+   font-size: larger;
+   font-weight: bolder;
+}
+
+.descripcion ion-card-subtitle {
+   font-size: large;
+   color: white;
+}
+
+.iva {
+   color: #c3c2c0;
+}
+
+ion-item {
+   --background: rgba(0, 0, 0, 0.60);
+}
+
+ion-list {
+   --background: rgba(0, 0, 0, 0.60);
+   color: #ffff;
+}
+
+.evaluation_part {
+   display: flex;
+   justify-content: center;
+}
+
+.descripcion ion-icon {
+   color: white;
+}
+
+.descripcion_fav {
+   display: flex;
+   justify-content: space-between;
+}
+
+.boton_agregar{
+   display: flex;
+   justify-content:space-between;
+}
+
+.boton_agregar ion-button{
+   --background: rgba(0, 0, 0, 0.60);
+   border: 1px solid white;
+   color: white;
+   border-radius: 28px;
+}

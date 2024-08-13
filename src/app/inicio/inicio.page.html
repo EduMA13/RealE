@@ -1,0 +1,72 @@
+<ion-content [fullscreen]="true">
+
+  <div class="header">
+    <ion-title>Inicio</ion-title>
+    <div class="perfil_usuario">
+      <ion-button fill="clear" (click)="toggleAccordion()">
+        <img class="img_usuario" src="../../assets/img/User_icon.png" alt="User Icon">
+      </ion-button>
+    </div>
+    <div *ngIf="isAccordionOpen" class="accordion-content" >
+      <ion-item class="first_button" (click)="navigateTo('favorites')">
+        <ion-label >
+          Favoritos
+        </ion-label>
+      </ion-item> 
+      <ion-item class="second_button">
+        <ion-label >
+          Más contenido
+        </ion-label>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="search_filter">
+    <ion-searchbar [(ngModel)]="searchQuery"
+    placeholder="Buscar propiedades" (ionInput)="filterItems($event)"
+    ></ion-searchbar>
+
+    <div class="button-group">
+      <ion-button class="home_btn" fill="clear" (click)="navigateTo('public-properties')">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="filter_btn" fill="clear" (click)="openFilterModal()">
+        <ion-icon name="filter-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="last_btn" fill="clear" (click)="navigateTo('carrito')">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+  <div class="title">
+    <p>Propiedades</p>
+  </div>
+  <div class="properties">
+    <ion-card  *ngFor="let property of filteredProperties" class="property-card">
+      <img [src]="property.image" alt="Casa en fraccionamiento" />
+      <ion-card-header>
+        <ion-card-title>
+         <h2>{{ property?.title }}</h2>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="property-status">
+          <ion-icon name="checkmark-circle"></ion-icon>
+          Status: {{ property.status }}
+        </div>
+        <div class="property-location">
+          <ion-icon name="location-outline"></ion-icon>
+          {{ property.address}}
+        </div>
+        <div class="property-price">
+          {{ property?.price }}
+        </div>
+         <!-- Simulamos el clic para pasar un ID fijo -->
+          <ion-button expand="block" (click)="navigateTo('description', property.id)">
+          Ver más
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

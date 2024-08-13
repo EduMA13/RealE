@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="header">
+    <ion-back-button defaultHref="/inicio"></ion-back-button>
+    <ion-title>Carrito</ion-title>
+  </div>
+
+  <div class="description_middle">
+    <ion-card-header>
+      <ion-card-title>Aquí puedes encontrar todas las propiedades que tienes en el carrito.</ion-card-title>
+    </ion-card-header>
+  </div>
+
+  <ng-container *ngIf="cartProperties.length > 0; else emptyCart">
+    <div class="favorites">
+      <ion-card *ngFor="let property of cartProperties" class="property-card">
+        <ion-card-content>
+          <ion-item lines="none" class="property-item">
+            <ion-thumbnail slot="start" class="property-thumbnail">
+              <img alt="Casa" [src]="property.image" />
+            </ion-thumbnail>
+            <ion-label>
+              <div class="desc_fav">
+                <h2>{{ property.title }}</h2>
+                <p>{{ property.address }}</p>
+                <p class="price">{{ property.price | currency }}</p>
+                <div class="delete_button">
+                  <ion-button class="contact_btn" shape="round" fill="clear">Contacto</ion-button> 
+                  <ion-button class="delete_btn" shape="round" fill="clear" (click)="removeFromCart(property.id)">Eliminar</ion-button>
+                </div>
+              </div>
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ng-container>
+
+  <ng-template #emptyCart>
+    <p>No hay productos en el carrito.</p>
+  </ng-template>
+</ion-content>

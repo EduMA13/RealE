@@ -1,0 +1,93 @@
+ion-content {
+    --background: url('../../assets/img/Background_image.png') no-repeat center center / cover;
+}
+
+.header {
+    display: flex;
+    margin-top: 20px;
+}
+
+ion-back-button {
+    width: 10px;
+}
+
+
+
+//images
+.add-image-button {
+    border: 1px solid #fff;
+    /* Borde blanco */
+    background-color: transparent;
+    /* Fondo transparente */
+    color: #fff;
+    /* Texto blanco */
+    border-radius: 20px;
+    /* Borde redondeado */
+    margin-top: 10px;
+    font-size: 16px;
+    /* Tamaño de fuente */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+.property_title {
+    padding: 5px;
+}
+
+.address_title {
+    padding: 5px;
+}
+
+.image_title {
+    padding: 5px;
+}
+
+.price_title {
+    padding: 5px;
+}
+
+.description_title {
+    padding: 5px;
+}
+
+.chr_title{
+    padding: 5px;
+    color: white;
+}
+
+.second_part{
+    --padding: 5px;
+}
+
+ion-grid {
+    --ion-grid-padding: 0;
+    --ion-grid-column-padding: 5px;
+}
+
+ion-col {
+    padding: 5px;
+}
+
+ion-card {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+ion-img {
+    height: 100px;
+    width: 100px;
+}
+
+ion-card-subtitle{
+    --color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: medium;
+}
+
+.update_btn{
+    border: 1px solid  #cccccc;
+    border-radius: 20px;
+    --background: black;
+    --color: white;
+    font-weight: bolder;
+}

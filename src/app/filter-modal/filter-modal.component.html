@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Filtros</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="filter-container">
+    <h2>Ubicación</h2>
+    <ion-chip [class.selected]="location === 'Durango'" (click)="location = 'Durango'">Durango</ion-chip>
+
+    <h2>Tipo de propiedad</h2>
+    <div class="property-type">
+      <ion-chip *ngFor="let type of ['Bodega', 'Casa', 'Departamento', 'Edificio', 'Local', 'Oficina', 'Rancho']"
+                [class.selected]="propertyType === type"
+                (click)="selectPropertyType(type)">
+        {{ type }}
+      </ion-chip>
+    </div>
+
+    <h2>Precio</h2>
+    <div class="price-range">
+      <ion-input [(ngModel)]="minPrice" type="number" placeholder="Mínimo"></ion-input>
+      <ion-input [(ngModel)]="maxPrice" type="number" placeholder="Máximo"></ion-input>
+    </div>
+
+    <ion-button class="apply_btn" fill="clear" shape="round" expand="full" (click)="applyFilters()">Aplicar</ion-button>
+    <ion-button class="delete_btn" expand="full" fill="clear" shape="round" (click)="clearFilters()" [disabled]="!hasActiveFilters()">Borrar Filtros</ion-button>
+  </div>
+</ion-content>
